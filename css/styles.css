@@ -58,3 +58,156 @@ body{
     font: 16px/1.6 "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Geneva, Verdana, sans-serif ; /* voir fs sur smashing magasine http://coding.smashingmagazine.com/2009/09/22/complete-guide-to-css-font-stacks/ */
     color: #333;
 }
+
+h1{
+    font-size: 2em;
+    color:rgb(137, 74, 79);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px; /* 40px effet image + 10 padding */
+}
+
+/* POSITIONNEMENT IMAGES  (changements au survol à faire après) */
+
+ul{
+    position: relative;
+    padding-top: 562px; /* 3*164 + 2*10 + 10 padding en-dessous + 40 effet image */
+    padding-bottom: 40px;
+}
+h3 img{
+    position: absolute;
+    padding: 1px;
+    border:1px solid #ccc;
+    width:160px;
+    height: 160px;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    /*outline: 1px solid #ccc;*/
+}
+li#pomegranate h3 img{
+    top: 0px;
+    left: 0px;
+}
+/* li#pomegranate a:hover img{
+    top:-40px; */ /* img passe de 160 à 240 px => 80 de plus => doit remonter de 40 */
+    /*left:-40px;
+}*/
+li#carrot h3 img{
+    top: 0px;
+    left: 174px;
+}
+/*li#carrot a:hover img{
+    top:-40px;
+    left:134px;
+}*/
+li#onion h3 img{
+    top: 0px;
+    left: 348px;
+}
+/*li#onion a:hover img{
+    top:-40px;
+    left:308px;
+}*/
+li#gourd h3 img{
+    top: 174px;
+    left: 0px;
+}
+/*li#gourd a:hover img{
+    top:134px;
+    left:-40px
+}*/
+li#strawberry h3 img{
+    top: 174px;
+    left: 174px;
+}
+/*li#strawberry a:hover img{
+    top:134px;
+    left:134px
+}*/
+li#lily h3 img{
+    top: 174px;
+    left: 348px;
+}
+/*li#lily a:hover img{
+    top:134px;
+    left:308px
+}*/
+li#fig h3 img{
+    top: 348px;
+    left: 0px;
+}
+/*li#fig a:hover img{
+    top:308px;
+    left:-40px
+}*/
+li#wine h3 img{
+    top: 348px;
+    left: 174px;
+}
+/*li#wine a:hover img{
+    top:308px;
+    left:134px
+}*/
+li#bean h3 img{
+    top: 348px;
+    left: 348px;
+}
+/*li#bean a:hover img{
+    top:308px;
+    left:308px
+}*/
+
+/*  STYLES DU TEXTE */
+
+h3,p{
+    display: inline;
+}
+li{
+    margin-bottom: 0.5em;
+}
+p{
+    color: #666;
+}
+a, a:visited{
+    color:rgb(137,74,79); /* ! le texte des h3 est dans un a !! */
+}
+/*
+li.pair{
+    padding: 0.5em;
+    background: #fcf3ea;
+}
+*/
+li:nth-child(even){
+    padding: 0.5em;
+    background: #fcf3ea;
+}
+
+/* EFFETS */
+
+a:hover, li:target a{
+    color:rgb(87,24,29);
+}
+a:hover img{
+    border: 1px solid #000;
+    width: 240px;
+    height : 240px;
+    z-index: 100;
+    background: white;
+    margin-top:-40px; /*img passe de 160 à 240 px => 80 de plus => doit remonter de 40 */
+    margin-left:-40px;
+}
+li:target{
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border: 1px solid #dab69c;
+    background: #ead9ee;
+    font-size: 1.2em;
+    /*transition: background 3s;
+    -webkit-transition: background 3s;
+    -moz-transition: background 3s; */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+li:target p{
+    color: #000;
+    /* ne fonctionne pas par héritage sur le li car color défini explicitement pour p */
+}
